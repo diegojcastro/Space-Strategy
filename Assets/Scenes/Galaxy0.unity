@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 101536795}
   - component: {fileID: 101536796}
+  - component: {fileID: 101536797}
   m_Layer: 0
   m_Name: Planet4
   m_TagString: Untagged
@@ -202,6 +203,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &101536797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101536794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Planet with a big name
+  faction: Neutral
+  population: 1
+  popText: 10
+  labelTexts: []
 --- !u!1 &264309728
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +674,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   planetName: Planet
+  faction: Neutral
   population: 10
   popText: 10
+  labelTexts: []
 --- !u!1 &950789292
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950789293}
   - component: {fileID: 950789294}
+  - component: {fileID: 950789295}
   m_Layer: 0
   m_Name: Planet2
   m_TagString: Untagged
@@ -738,6 +760,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &950789295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950789292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Second Planet
+  faction: Neutral
+  population: 23
+  popText: 10
+  labelTexts: []
 --- !u!1 &971953906
 GameObject:
   m_ObjectHideFlags: 0

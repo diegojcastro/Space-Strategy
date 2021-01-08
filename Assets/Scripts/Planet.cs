@@ -9,13 +9,15 @@ public class Planet : MonoBehaviour
     public GameObject label;
     private GameObject loadedLabel;
     
-
-    private int growth = 0;
+    // I can make a growth variable if I want them to increase pop at different rates
+    //public int growth = 0;
     public string planetName= "Planet";
-    private string faction = "Neutral";
+    public string faction = "Neutral";
 
     public float population = 10f;
     public string popText = "10";
+
+    public TextMeshProUGUI[] labelTexts;
     
 
 
@@ -36,8 +38,11 @@ public class Planet : MonoBehaviour
          * 
          * check whether it's TMPro or TMProUGUI
          */
-        
-        //loadedLabel.GetComponentsInChildren<TextMeshPro>
+
+        labelTexts = loadedLabel.GetComponentsInChildren<TextMeshProUGUI>();
+        labelTexts[0].text = planetName;
+
+
 
     }
 
@@ -46,6 +51,7 @@ public class Planet : MonoBehaviour
     {
         population += Time.deltaTime;
         popText = Mathf.FloorToInt(population).ToString();
+        labelTexts[1].text = popText;
     }
 
     void MoveTroops()
