@@ -18,12 +18,25 @@ public class Planet : MonoBehaviour
     public string popText = "10";
 
     public TextMeshProUGUI[] labelTexts;
+
+    [Header("Parent References")]
+    [SerializeField]
+    private GameObject planetArray;
+    [SerializeField]
+    private GameObject gameManager;
+    [SerializeField]
+    private GameManager managerScript;
     
 
 
     // Start is called before the first frame update
     void Start()
     {
+        planetArray = transform.parent.gameObject;
+        gameManager = planetArray.transform.parent.gameObject;
+        managerScript = gameManager.GetComponent<GameManager>();
+
+
         loadedLabel = Instantiate(label, FindObjectOfType<Canvas>().transform);
 
         /* I am using the code below only at the start since it won't change throughout the game,
@@ -58,4 +71,24 @@ public class Planet : MonoBehaviour
     {
 
     }
+
+    void ChangeOwner(string newOwner)
+    {
+
+    }
+
+    /*
+    private void OnMouseDown()
+    {
+        managerScript.selectedPlanet = gameObject;
+    }
+
+    private void OnMouseUp()
+    {
+        //if (Input.GetMouseButtonUp(1))
+        {
+            managerScript.targetPlanet = gameObject;
+        }
+    }
+    */
 }

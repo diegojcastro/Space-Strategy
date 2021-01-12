@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 101536795}
   - component: {fileID: 101536796}
   - component: {fileID: 101536797}
+  - component: {fileID: 101536798}
   m_Layer: 0
   m_Name: Planet4
   m_TagString: Untagged
@@ -192,7 +193,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81078ecf7d1c7a145a8fec6523dd2629, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -221,6 +222,25 @@ MonoBehaviour:
   population: 1
   popText: 10
   labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &101536798
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101536794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
 --- !u!1 &264309728
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +270,7 @@ Transform:
   m_Children:
   - {fileID: 486442645}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486442643
 GameObject:
@@ -343,6 +363,8 @@ GameObject:
   m_Component:
   - component: {fileID: 506584640}
   - component: {fileID: 506584641}
+  - component: {fileID: 506584642}
+  - component: {fileID: 506584643}
   m_Layer: 0
   m_Name: Planet5
   m_TagString: Untagged
@@ -403,7 +425,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6667687bd8bc2147b95292cb030bdaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -414,6 +436,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &506584642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506584639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Middle
+  faction: Neutral
+  population: 12
+  popText: 10
+  labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &506584643
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506584639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000011920929, y: 0.000000029802322}
+  serializedVersion: 2
+  m_Radius: 0.32
 --- !u!1 &672882789
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +484,7 @@ GameObject:
   - component: {fileID: 672882792}
   - component: {fileID: 672882791}
   - component: {fileID: 672882790}
+  - component: {fileID: 672882793}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -495,8 +555,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672882793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672882789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5809f6f24396b4d4489925f473fd41ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1213864383}
 --- !u!1 &752032854
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +580,8 @@ GameObject:
   m_Component:
   - component: {fileID: 752032855}
   - component: {fileID: 752032856}
+  - component: {fileID: 752032857}
+  - component: {fileID: 752032858}
   m_Layer: 0
   m_Name: Planet8
   m_TagString: Untagged
@@ -567,7 +642,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d25fc0cfd05f98418b1c8613861a350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -578,6 +653,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &752032857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752032854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Enemy HQ
+  faction: Enemy
+  population: 30
+  popText: 10
+  labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &752032858
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752032854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &800212128
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,6 +701,7 @@ GameObject:
   - component: {fileID: 800212129}
   - component: {fileID: 800212130}
   - component: {fileID: 800212131}
+  - component: {fileID: 800212132}
   m_Layer: 0
   m_Name: Planet1
   m_TagString: Untagged
@@ -649,7 +762,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f81e586fbce90da408cb10aaf4433cd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -678,6 +791,25 @@ MonoBehaviour:
   population: 10
   popText: 10
   labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &800212132
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800212128}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
 --- !u!1 &950789292
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +821,7 @@ GameObject:
   - component: {fileID: 950789293}
   - component: {fileID: 950789294}
   - component: {fileID: 950789295}
+  - component: {fileID: 950789296}
   m_Layer: 0
   m_Name: Planet2
   m_TagString: Untagged
@@ -749,7 +882,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 347857b4fc3ffae48afd535554520b67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -778,6 +911,25 @@ MonoBehaviour:
   population: 23
   popText: 10
   labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &950789296
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950789292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
 --- !u!1 &971953906
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,8 +1051,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046565367}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014231563, y: -0.014231617, z: -0.4134545}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.877117, y: -0.16834854, z: 0.47309253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800212129}
@@ -911,8 +1063,55 @@ Transform:
   - {fileID: 2062448092}
   - {fileID: 1839560341}
   - {fileID: 752032855}
+  m_Father: {fileID: 1213864384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1213864382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213864384}
+  - component: {fileID: 1213864383}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1213864383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213864382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953c2a60079e5b644af26c134c87b71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScore: 0
+  selectedPlanet: {fileID: 0}
+  targetPlanet: {fileID: 0}
+--- !u!4 &1213864384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213864382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.89134854, y: 0.15411691, z: -0.886547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1046565368}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1839560340
 GameObject:
@@ -924,6 +1123,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1839560341}
   - component: {fileID: 1839560342}
+  - component: {fileID: 1839560343}
+  - component: {fileID: 1839560344}
   m_Layer: 0
   m_Name: Planet7
   m_TagString: Untagged
@@ -984,7 +1185,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d25fc0cfd05f98418b1c8613861a350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -995,6 +1196,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1839560343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839560340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Enemy Top
+  faction: Enemy
+  population: 16
+  popText: 10
+  labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &1839560344
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839560340}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2062448091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1243,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2062448092}
   - component: {fileID: 2062448093}
+  - component: {fileID: 2062448094}
+  - component: {fileID: 2062448095}
   m_Layer: 0
   m_Name: Planet6
   m_TagString: Untagged
@@ -1065,7 +1305,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d25fc0cfd05f98418b1c8613861a350, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1076,6 +1316,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2062448094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062448091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Enemy Bot
+  faction: Enemy
+  population: 10
+  popText: 10
+  labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &2062448095
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062448091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &2080734792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1429,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2126565500}
   - component: {fileID: 2126565501}
+  - component: {fileID: 2126565502}
+  - component: {fileID: 2126565503}
   m_Layer: 0
   m_Name: Planet3
   m_TagString: Untagged
@@ -1212,7 +1491,7 @@ SpriteRenderer:
   m_SortingLayerID: 1320943449
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: df1ab1b48b84b40468efd37da908c904, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e1937323754d1a49a351f743d6570ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1223,3 +1502,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2126565502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126565499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa0e380ca1699a43ad94882e52ba828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
+  planetName: Third
+  faction: Neutral
+  population: 4
+  popText: 10
+  labelTexts: []
+  planetArray: {fileID: 0}
+  gameManager: {fileID: 0}
+  managerScript: {fileID: 0}
+--- !u!58 &2126565503
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126565499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32
