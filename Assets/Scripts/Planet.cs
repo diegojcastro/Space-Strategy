@@ -8,6 +8,8 @@ public class Planet : MonoBehaviour
 {
     public GameObject label;
     private GameObject loadedLabel;
+
+    public Ship ship;
     
     // I can make a growth variable if I want them to increase pop at different rates
     //public int growth = 0;
@@ -67,9 +69,31 @@ public class Planet : MonoBehaviour
         labelTexts[1].text = popText;
     }
 
-    void MoveTroops()
+    public void MoveTroops(Planet target)
     {
+        if (target != this)
+        {
+            Debug.Log("I am moving troops to " + target.planetName);
+            SpawnShips(target);
+        }
 
+    }
+
+    void SpawnShips(Planet target)
+    {
+        float plusOne = population % 2;
+        float spawnPop = population / 2;
+        population = spawnPop + plusOne;
+
+        Ship newShip = Instantiate(ship, transform, true);
+        newShip.power = (int)spawnPop;
+        newShip.transform.position = transform.position;
+        newShip.targetPlanet = target;
+        Vector2 dir = target.transform.position - newShip.transform.position;
+        dir.Normalize();
+        newShip.direction = dir;
+        
+        
     }
 
     void ChangeOwner(string newOwner)

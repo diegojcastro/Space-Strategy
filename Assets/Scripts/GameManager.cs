@@ -9,8 +9,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int totalScore;
-    public GameObject selectedPlanet;
-    public GameObject targetPlanet;
+    public Planet selectedPlanet;
+    public Planet targetPlanet;
+
+    [Header("Inputs")]
+    public bool targeting;
 
     private void Awake()
     {
@@ -19,50 +22,22 @@ public class GameManager : MonoBehaviour
         // MakeSingleton();
     }
 
-/*
+
 
     private void Update()
     {
-        // The eventsystem part is to make sure my mouse is not ver
-        // a UI element. I might be able to get rid of it if I'm not
-        // actually using a big UI down the line.
-        
-
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (selectedPlanet != null && targetPlanet != null && targeting == true)
         {
-            raycastLeftDown();
+            selectedPlanet.MoveTroops(targetPlanet);
+
+            targeting = false;
+            selectedPlanet = null;
+            targetPlanet = null;
         }
     }
 
-    private void raycastLeftDown()
-    {
-        Debug.Log("Starting left click function");
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+   
 
-        if(Physics.Raycast(ray, out hit, 20))
-        {
-            Debug.Log("Hit something");
-            Debug.Log(hit.collider.name);
-            GameObject clicked = hit.transform.gameObject;
-            selectedPlanet = clicked;
-        }
-    }
-
-    private void raycastRightDown()
-    {
-
-    }
-    private void raycastLeftUp()
-    {
-
-    }
-
-    private void raycastRightUp()
-    {
-
-    }
-*/
     
 
 
