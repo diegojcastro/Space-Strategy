@@ -217,10 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Planet with a big name
   faction: Neutral
-  population: 1
+  population: 10
   popText: 10
   labelTexts: []
   planetArray: {fileID: 0}
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Middle
   faction: Neutral
   population: 12
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Enemy HQ
   faction: Enemy
   population: 30
@@ -791,7 +791,7 @@ MonoBehaviour:
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Planet
-  faction: Neutral
+  faction: Player
   population: 10
   popText: 10
   labelTexts: []
@@ -910,9 +910,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Second Planet
-  faction: Neutral
+  faction: Player
   population: 23
   popText: 10
   labelTexts: []
@@ -1215,7 +1215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Enemy Top
   faction: Enemy
   population: 16
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Enemy Bot
   faction: Enemy
   population: 10
@@ -1523,9 +1523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
-  ship: {fileID: 0}
+  ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Third
-  faction: Neutral
+  faction: Player
   population: 4
   popText: 10
   labelTexts: []

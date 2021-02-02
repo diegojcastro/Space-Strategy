@@ -64,7 +64,13 @@ public class Planet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        population += Time.deltaTime;
+        // I can split this into its own function instead of writing code here.
+        // Should add a "Grow" function that scales based on size maybe.
+        if(faction != "Neutral")
+        {
+            population += Time.deltaTime;
+            
+        }
         popText = Mathf.FloorToInt(population).ToString();
         labelTexts[1].text = popText;
     }
@@ -92,6 +98,9 @@ public class Planet : MonoBehaviour
         Vector2 dir = target.transform.position - newShip.transform.position;
         dir.Normalize();
         newShip.direction = dir;
+        newShip.faction = faction;
+        newShip.sourcePlanet = this;
+        
         
         
     }

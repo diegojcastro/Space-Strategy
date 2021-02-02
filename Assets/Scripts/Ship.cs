@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 
@@ -8,16 +6,25 @@ public class Ship : MonoBehaviour
 {
     public GameObject label;
     private GameObject loadedLabel;
+    public Planet hitPlanet = null;
 
     [Header("Attributes")]
     public string faction;
     public int power;
     public int oldPower;
     public int speed;
+    public Planet sourcePlanet;
     public Planet targetPlanet;
     public Vector2 direction;
 
     public TextMeshProUGUI labelText;
+    private SpriteRenderer spriteRenderer;
+
+    // In the future I can change this to use Animator instead
+    // I'll likely change it once we have death/attack animations.
+    [Header("imageHolders")]
+    public Sprite friend;
+    public Sprite enemy;
 
 
 
@@ -25,8 +32,9 @@ public class Ship : MonoBehaviour
     void Start()
     {
         loadedLabel = Instantiate(label, FindObjectOfType<Canvas>().transform);
-
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        SelectSprite();
+        RotateSprite();
 
 
 
@@ -41,7 +49,37 @@ public class Ship : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("I hit something, seemingly " + collision);
+        if (collision.gameObject != sourcePlanet.gameObject)
+        {
+            Debug.Log("I hit something, seemingly " + collision.gameObject);
+            hitPlanet = collision.GetComponent<Planet>();
+            if (hitPlanet)
+            {
+                if (hitPlanet.faction == faction)
+                {
+                    Reinforce(hitPlanet);
+                }
+                else
+                {
+                    AttackPlanet(hitPlanet);
+                }
+            }
+            else
+            {
+                Ship hitShip = collision.GetComponent<Ship>();
+                if (hitShip)
+                {
+                    Debug.Log("Hit a ship.");
+                }
+                else
+                {
+                    Debug.Log("Did not find a ship collision.");
+                }
+            }
+            
+        }
+        
+        
     }
 
     void DisplayPowerLabel()
@@ -72,5 +110,59 @@ public class Ship : MonoBehaviour
     void Explode()
     {
 
+    }
+
+    void Reinforce(Planet target)
+    {
+        target.population += this.power;
+        DestroyShipAndLabel();
+    }
+
+    void DestroyShipAndLabel()
+    {
+        Destroy(loadedLabel);
+        Destroy(gameObject);
+    }
+
+    void AttackPlanet(Planet target)
+    {
+        target.population -= this.power;
+        if (target.population <= 0)
+        {
+            target.population *= -1;
+            target.faction = this.faction;
+            // TODO add an animation for conquering planet.
+
+            
+        }
+        DestroyShipAndLabel();
+    }
+
+    void SelectSprite()
+    {
+        if (faction.ToLower() == "player")
+            spriteRenderer.sprite = friend;
+        else if (faction.ToLower() == "enemy")
+            spriteRenderer.sprite = enemy;
+    }
+
+    void RotateSprite()
+    {
+        if (faction.ToLower() == "player")
+        {
+            if (direction != Vector2.zero)
+            {
+                float angle = -90f + Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+        }
+        else if (faction.ToLower() == "enemy")
+        {
+            if (direction != Vector2.zero)
+            {
+                float angle = 90f + Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+        }
     }
 }
