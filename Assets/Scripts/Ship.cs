@@ -114,7 +114,7 @@ public class Ship : MonoBehaviour
 
     void Reinforce(Planet target)
     {
-        target.population += this.power;
+        target.GrowPopulation(this.power);
         DestroyShipAndLabel();
     }
 
@@ -126,15 +126,7 @@ public class Ship : MonoBehaviour
 
     void AttackPlanet(Planet target)
     {
-        target.population -= this.power;
-        if (target.population <= 0)
-        {
-            target.population *= -1;
-            target.faction = this.faction;
-            // TODO add an animation for conquering planet.
-
-            
-        }
+        target.TakeDamage(this.power, this);
         DestroyShipAndLabel();
     }
 

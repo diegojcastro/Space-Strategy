@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 101536797}
   - component: {fileID: 101536798}
   m_Layer: 0
-  m_Name: Planet4
+  m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,11 +221,17 @@ MonoBehaviour:
   planetName: Planet with a big name
   faction: Neutral
   population: 10
+  armor: 0
   popText: 10
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 950789295}
+  - {fileID: 506584642}
+  - {fileID: 1839560343}
 --- !u!58 &101536798
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -367,7 +373,7 @@ GameObject:
   - component: {fileID: 506584642}
   - component: {fileID: 506584643}
   m_Layer: 0
-  m_Name: Planet5
+  m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,12 +459,20 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Middle
   faction: Neutral
-  population: 12
+  population: 15
+  armor: 0
   popText: 10
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 2126565502}
+  - {fileID: 101536797}
+  - {fileID: 2062448094}
+  - {fileID: 1839560343}
+  - {fileID: 752032857}
 --- !u!58 &506584643
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -585,7 +599,7 @@ GameObject:
   - component: {fileID: 752032857}
   - component: {fileID: 752032858}
   m_Layer: 0
-  m_Name: Planet8
+  m_Name: EnemyHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,11 +686,17 @@ MonoBehaviour:
   planetName: Enemy HQ
   faction: Enemy
   population: 30
-  popText: 10
+  armor: 0
+  popText: 30
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 506584642}
+  - {fileID: 2062448094}
+  - {fileID: 1839560343}
 --- !u!58 &752032858
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -706,7 +726,7 @@ GameObject:
   - component: {fileID: 800212131}
   - component: {fileID: 800212132}
   m_Layer: 9
-  m_Name: Planet1
+  m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,12 +812,17 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Planet
   faction: Player
-  population: 10
-  popText: 10
+  population: 35
+  armor: 0
+  popText: 30
+  growthRate: 2
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 950789295}
+  - {fileID: 2126565502}
 --- !u!58 &800212132
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -827,7 +852,7 @@ GameObject:
   - component: {fileID: 950789295}
   - component: {fileID: 950789296}
   m_Layer: 0
-  m_Name: Planet2
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -913,12 +938,17 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Second Planet
   faction: Player
-  population: 23
-  popText: 10
+  population: 20
+  armor: 0
+  popText: 20
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 101536797}
+  - {fileID: 800212131}
 --- !u!58 &950789296
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1132,7 +1162,7 @@ GameObject:
   - component: {fileID: 1839560343}
   - component: {fileID: 1839560344}
   m_Layer: 0
-  m_Name: Planet7
+  m_Name: EnemyTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1218,12 +1248,18 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Enemy Top
   faction: Enemy
-  population: 16
-  popText: 10
+  population: 22
+  armor: 0
+  popText: 22
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 506584642}
+  - {fileID: 752032857}
+  - {fileID: 101536797}
 --- !u!58 &1839560344
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,7 +1289,7 @@ GameObject:
   - component: {fileID: 2062448094}
   - component: {fileID: 2062448095}
   m_Layer: 0
-  m_Name: Planet6
+  m_Name: EnemyBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,12 +1375,18 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Enemy Bot
   faction: Enemy
-  population: 10
-  popText: 10
+  population: 15
+  armor: 0
+  popText: 15
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 506584642}
+  - {fileID: 752032857}
+  - {fileID: 2126565502}
 --- !u!58 &2062448095
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1440,7 +1482,7 @@ GameObject:
   - component: {fileID: 2126565502}
   - component: {fileID: 2126565503}
   m_Layer: 0
-  m_Name: Planet3
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1526,12 +1568,18 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetName: Third
   faction: Player
-  population: 4
+  population: 5
+  armor: 0
   popText: 10
+  growthRate: 1
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
   managerScript: {fileID: 0}
+  adjacents:
+  - {fileID: 800212131}
+  - {fileID: 506584642}
+  - {fileID: 2062448094}
 --- !u!58 &2126565503
 CircleCollider2D:
   m_ObjectHideFlags: 0

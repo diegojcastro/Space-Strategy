@@ -275,6 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8679784777119871127}
+  - component: {fileID: 4659941604674625657}
   m_Layer: 5
   m_Name: PlanetTag
   m_TagString: Untagged
@@ -303,3 +304,15 @@ RectTransform:
   m_AnchoredPosition: {x: 18.5, y: -98.12}
   m_SizeDelta: {x: 245.2008, y: 63.242767}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4659941604674625657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679784777119871124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d428264361efd849b80cb06960df26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
