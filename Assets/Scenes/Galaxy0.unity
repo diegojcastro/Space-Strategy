@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 101536796}
   - component: {fileID: 101536797}
   - component: {fileID: 101536798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,12 +218,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Planet with a big name
   faction: Neutral
   population: 10
   armor: 0
   popText: 10
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -257,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 264309729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486442645}
   - component: {fileID: 486442644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackgroundSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +337,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 454993547
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 089d9d41940b0744892bd8df8e2c18f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -372,7 +375,7 @@ GameObject:
   - component: {fileID: 506584641}
   - component: {fileID: 506584642}
   - component: {fileID: 506584643}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,12 +460,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Middle
   faction: Neutral
   population: 15
   armor: 0
   popText: 10
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -598,7 +604,7 @@ GameObject:
   - component: {fileID: 752032856}
   - component: {fileID: 752032857}
   - component: {fileID: 752032858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyHQ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,12 +689,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Enemy HQ
   faction: Enemy
   population: 30
   armor: 0
   popText: 30
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -810,12 +819,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Planet
   faction: Player
   population: 35
   armor: 0
   popText: 30
   growthRate: 2
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -851,7 +863,7 @@ GameObject:
   - component: {fileID: 950789294}
   - component: {fileID: 950789295}
   - component: {fileID: 950789296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,12 +948,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Second Planet
   faction: Player
   population: 20
   armor: 0
   popText: 20
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -1072,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046565368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Planets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046565367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.877117, y: -0.16834854, z: 0.47309253}
+  m_LocalPosition: {x: 0.877117, y: -0.16834854, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 800212129}
@@ -1133,6 +1148,7 @@ MonoBehaviour:
   totalScore: 0
   selectedPlanet: {fileID: 0}
   targetPlanet: {fileID: 0}
+  oldSelection: {fileID: 0}
   targeting: 0
 --- !u!4 &1213864384
 Transform:
@@ -1161,7 +1177,7 @@ GameObject:
   - component: {fileID: 1839560342}
   - component: {fileID: 1839560343}
   - component: {fileID: 1839560344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,12 +1262,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Enemy Top
   faction: Enemy
   population: 22
   armor: 0
   popText: 22
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -1288,7 +1307,7 @@ GameObject:
   - component: {fileID: 2062448093}
   - component: {fileID: 2062448094}
   - component: {fileID: 2062448095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyBot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,12 +1392,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Enemy Bot
   faction: Enemy
   population: 15
   armor: 0
   popText: 15
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}
@@ -1481,7 +1503,7 @@ GameObject:
   - component: {fileID: 2126565501}
   - component: {fileID: 2126565502}
   - component: {fileID: 2126565503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1566,12 +1588,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 8679784777119871124, guid: 9d2ad8aa1c3820146a0f3c4a91597912, type: 3}
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
+  planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
+    type: 3}
   planetName: Third
   faction: Player
   population: 5
   armor: 0
   popText: 10
   growthRate: 1
+  highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
   gameManager: {fileID: 0}

@@ -50,13 +50,15 @@ private void Update()
 
         if (hit)
         {
-            Debug.Log("I hit! " + hit.transform.gameObject);
+            //Debug.Log("I hit! " + hit.transform.gameObject);
             manager.selectedPlanet = hit.transform.gameObject.GetComponent<Planet>();
+            manager.targeting = false;
         }
         else
         {
-            Debug.Log("Jack: I did not hit");
+            //Debug.Log("Jack: I did not hit");
             manager.selectedPlanet = null;
+            manager.targeting = false;
         }
     }
 
@@ -70,14 +72,14 @@ private void Update()
             // I can use hit.transform.GetComponent<Planet>() or hit.transform.gameObject.GetComponent<Planet>()
             // Calling gameObject on hit.transform seems redundant but I'm leaving it there just in case.
 
-            Debug.Log("I hit! " + hit.transform.GetComponent<Planet>());
+            //Debug.Log("I hit! " + hit.transform.GetComponent<Planet>());
             manager.targetPlanet = null;
             manager.selectedPlanet = hit.transform.gameObject.GetComponent<Planet>();
             manager.targeting = true;
         }
         else
         {
-            Debug.Log("Jack: I did not hit");
+            //Debug.Log("Jack: I did not hit");
             manager.selectedPlanet = null;
             manager.targeting = false;
         }
@@ -90,12 +92,12 @@ private void Update()
 
         if (hit)
         {
-            Debug.Log("Aiming at " + hit.transform.gameObject);
+            //Debug.Log("Aiming at " + hit.transform.gameObject);
             manager.targetPlanet = hit.transform.gameObject.GetComponent<Planet>();
         }
         else
         {
-            Debug.Log("Jack: I did not hit");
+            //Debug.Log("Jack: I did not hit");
             manager.targetPlanet = null;
         }
     }

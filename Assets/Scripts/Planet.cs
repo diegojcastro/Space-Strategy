@@ -5,12 +5,17 @@ using System.Collections.Generic;
 
 public class Planet : MonoBehaviour
 {
+    [Header("Inspector References")]
     public GameObject label;
     private GameObject loadedLabel;
     private PlanetTag labelScript;
 
     public Ship ship;
+    public ParticleSystem planetParticles;
+    private ParticleSystem loadedParticles;
+    private ParticleSystem.MainModule mainParticle;
     
+    [Header("Planet Data")]
     // I can make a growth variable if I want them to increase pop at different rates
     //public int growth = 0;
     public string planetName= "Planet";
@@ -22,6 +27,9 @@ public class Planet : MonoBehaviour
     private int armor = 0;
     public string popText = "10";
     public float growthRate = 1f;
+    [SerializeField]
+    private bool highlighted = false;
+    private bool playing = false;
 
     public TextMeshProUGUI[] labelTexts;
 
@@ -50,16 +58,20 @@ public class Planet : MonoBehaviour
 
         PlaceLabelOnScreen();
 
-
-        /* Now I'm trying to get the text referenced here so it can go up as the pop goes up
-         * 
-         * check whether it's TMPro or TMProUGUI
-         */
-
         labelTexts = loadedLabel.GetComponentsInChildren<TextMeshProUGUI>();
         labelTexts[0].text = planetName;
 
         ColorizeLabel(faction);
+
+
+        loadedParticles = Instantiate(planetParticles, transform);
+        mainParticle = loadedParticles.main;
+        ColorizeParticle();
+        loadedParticles.Stop();
+
+
+
+
         adjacentsList = new List<Planet>(adjacents); 
 
     }
@@ -70,11 +82,35 @@ public class Planet : MonoBehaviour
         return false;
     }
 
+    void ColorizeParticle()
+    {
+        if (faction.ToLower() == "player")
+            mainParticle.startColor = Color.green;
+        else if (faction.ToLower() == "neutral")
+            mainParticle.startColor = Color.yellow;
+        else if (faction.ToLower() == "enemy")
+            mainParticle.startColor = Color.red;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         PassiveGrowth();
+
+        // TODO: change the snippet below to a function to clean it up a bit.
+
+        if (highlighted && !playing)
+        {
+            loadedParticles.Play();
+            playing = true;
+        }
+        else if (!highlighted && playing)
+        {
+            loadedParticles.Stop();
+            playing = false;
+        }
+
 
         // Uncomment below to change labels as screen size changes.
         // PlaceLabelOnScreen();
@@ -134,6 +170,7 @@ public class Planet : MonoBehaviour
     {
         faction = newOwner;
         ColorizeLabel(faction);
+        ColorizeParticle();
     }
 
     void PassiveGrowth()
@@ -180,6 +217,16 @@ public class Planet : MonoBehaviour
             labelTexts[1].color = labelScript.PLAYER;
         }
 
+    }
+
+    public void Highlight()
+    {
+        highlighted = true;
+    }
+
+    public void Unhighlight()
+    {
+        highlighted = false;
     }
 
     /*
