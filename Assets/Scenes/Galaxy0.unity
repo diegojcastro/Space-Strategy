@@ -235,6 +235,8 @@ MonoBehaviour:
   - {fileID: 950789295}
   - {fileID: 506584642}
   - {fileID: 1839560343}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &101536798
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -479,6 +481,8 @@ MonoBehaviour:
   - {fileID: 2062448094}
   - {fileID: 1839560343}
   - {fileID: 752032857}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &506584643
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -696,7 +700,7 @@ MonoBehaviour:
   population: 30
   armor: 0
   popText: 30
-  growthRate: 1
+  growthRate: 2
   highlighted: 0
   labelTexts: []
   planetArray: {fileID: 0}
@@ -706,6 +710,8 @@ MonoBehaviour:
   - {fileID: 506584642}
   - {fileID: 2062448094}
   - {fileID: 1839560343}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &752032858
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -835,6 +841,8 @@ MonoBehaviour:
   adjacents:
   - {fileID: 950789295}
   - {fileID: 2126565502}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &800212132
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -964,6 +972,8 @@ MonoBehaviour:
   adjacents:
   - {fileID: 101536797}
   - {fileID: 800212131}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &950789296
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1279,6 +1289,8 @@ MonoBehaviour:
   - {fileID: 506584642}
   - {fileID: 752032857}
   - {fileID: 101536797}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &1839560344
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1409,6 +1421,8 @@ MonoBehaviour:
   - {fileID: 506584642}
   - {fileID: 752032857}
   - {fileID: 2126565502}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &2062448095
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1605,6 +1619,8 @@ MonoBehaviour:
   - {fileID: 800212131}
   - {fileID: 506584642}
   - {fileID: 2062448094}
+  lastAttack: 0
+  attackCooldown: 0
 --- !u!58 &2126565503
 CircleCollider2D:
   m_ObjectHideFlags: 0

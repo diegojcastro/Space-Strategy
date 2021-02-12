@@ -16,8 +16,6 @@ public class Planet : MonoBehaviour
     private ParticleSystem.MainModule mainParticle;
     
     [Header("Planet Data")]
-    // I can make a growth variable if I want them to increase pop at different rates
-    //public int growth = 0;
     public string planetName= "Planet";
     public string faction = "Neutral";
 
@@ -43,6 +41,12 @@ public class Planet : MonoBehaviour
 
     public Planet[] adjacents;
     private List<Planet> adjacentsList;
+
+    [Header("Enemy Planet Data")]
+    [SerializeField]
+    private float lastAttack;
+    [SerializeField]
+    private float attackCooldown;
 
 
     // Start is called before the first frame update
@@ -98,8 +102,48 @@ public class Planet : MonoBehaviour
     {
         PassiveGrowth();
 
-        // TODO: change the snippet below to a function to clean it up a bit.
+        ResolveHighlightAnimationState();
 
+        if(faction.ToLower() == "enemy")
+        {
+            EnemyAttackScript();
+        }
+
+        // Uncomment below to change labels as screen size changes.
+        // PlaceLabelOnScreen();
+    }
+
+
+    void EnemyAttackScript()
+    {
+        if ( population > 20 && Time.time > lastAttack+attackCooldown)
+        {
+            Planet lowestPopNeighbor = this;
+            foreach (Planet p in adjacents) {
+                if (p.faction.ToLower() != "enemy" )
+                {
+                    MoveTroops(p);
+                    attackCooldown = Random.Range(2, 5);
+                    lastAttack = Time.time;
+                    return;
+                }
+                if (p.population < lowestPopNeighbor.population)
+                {
+                    lowestPopNeighbor = p;
+                }
+                
+            }
+            MoveTroops(lowestPopNeighbor);
+            attackCooldown = Random.Range(2, 5);
+            lastAttack = Time.time;
+
+        }
+    }
+
+
+
+    void ResolveHighlightAnimationState()
+    {
         if (highlighted && !playing)
         {
             loadedParticles.Play();
@@ -110,10 +154,6 @@ public class Planet : MonoBehaviour
             loadedParticles.Stop();
             playing = false;
         }
-
-
-        // Uncomment below to change labels as screen size changes.
-        // PlaceLabelOnScreen();
     }
 
     void PlaceLabelOnScreen()

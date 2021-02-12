@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                     p.Highlight();
                 }
             }
-            if (targetPlanet != null && targeting == true)
+            if (targetPlanet != null && targeting == true && selectedPlanet.faction.ToLower() == "player")
             {
                 selectedPlanet.MoveTroops(targetPlanet);
 
