@@ -56,8 +56,8 @@ public class Planet : MonoBehaviour
         gameManager = planetArray.transform.parent.gameObject;
         managerScript = gameManager.GetComponent<GameManager>();
 
-
-        loadedLabel = Instantiate(label, FindObjectOfType<Canvas>().transform);
+        // FindObjectOfType<Canvas>() instead of labelCanvas before
+        loadedLabel = Instantiate(label, managerScript.labelCanvas.transform);
         labelScript = label.GetComponent<PlanetTag>();
 
         PlaceLabelOnScreen();
@@ -208,9 +208,24 @@ public class Planet : MonoBehaviour
 
     void ChangeOwner(string newOwner)
     {
+        if (faction.ToLower() == "player")
+            managerScript.friendlyPlanetTotal -= 1;
+        else if (faction.ToLower() == "enemy")
+            managerScript.enemyPlanetTotal -= 1;
+        else if (faction.ToLower() == "neutral")
+            managerScript.neutralPlanetTotal -= 1;
+
+
         faction = newOwner;
         ColorizeLabel(faction);
         ColorizeParticle();
+
+        if (faction.ToLower() == "player")
+            managerScript.friendlyPlanetTotal += 1;
+        else if (faction.ToLower() == "enemy")
+            managerScript.enemyPlanetTotal += 1;
+        else if (faction.ToLower() == "neutral")
+            managerScript.neutralPlanetTotal += 1;
     }
 
     void PassiveGrowth()
