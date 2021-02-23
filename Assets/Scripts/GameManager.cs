@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
         pauseMenuScript = pauseMenuUI.GetComponent<PauseMenuUI>();
 
-        
+        DebugDisplayCameraInfo();
 
         // Uncomment below to use the one that starts in MainMenu
         // MakeSingleton();
@@ -59,6 +59,16 @@ public class GameManager : MonoBehaviour
 
         WinLossHandler();
         
+    }
+
+    private void DebugDisplayCameraInfo()
+    {
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
+
+        Debug.Log("Camera height = " + height);
+        Debug.Log("Camera width = " + width);
     }
 
     private void ShowPauseScreen(string topText)
