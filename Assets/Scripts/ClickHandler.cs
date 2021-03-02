@@ -37,10 +37,10 @@ private void Update()
         {
             raycastRight2d();
         }
-        if (Input.GetMouseButtonUp(1) && !EventSystem.current.IsPointerOverGameObject())
-        {
-            raycastRight2dUp();
-        }
+        //if (Input.GetMouseButtonUp(1) && !EventSystem.current.IsPointerOverGameObject())
+        //{
+        //    raycastRight2dUp();
+        //}
     }
 
     private void raycastLeft2d()
@@ -67,24 +67,30 @@ private void Update()
         Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         RaycastHit2D hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
 
-        if (hit)
+        if (hit && manager.selectedPlanet != null)
         {
             // I can use hit.transform.GetComponent<Planet>() or hit.transform.gameObject.GetComponent<Planet>()
             // Calling gameObject on hit.transform seems redundant but I'm leaving it there just in case.
 
             //Debug.Log("I hit! " + hit.transform.GetComponent<Planet>());
-            manager.targetPlanet = null;
-            manager.selectedPlanet = hit.transform.gameObject.GetComponent<Planet>();
+            //manager.targetPlanet = null;
+            manager.targetPlanet = hit.transform.gameObject.GetComponent<Planet>();
             manager.targeting = true;
         }
         else
         {
             //Debug.Log("Jack: I did not hit");
-            manager.selectedPlanet = null;
+            manager.targetPlanet = null;
             manager.targeting = false;
         }
     }
 
+    /* The block below will be commented out for now as I move to left click to select, right click to target.
+     * It was useful when movement was done with a right click -> Drag right click for movement, like vector targeting
+     *  in League.
+     */
+
+    /* 
     private void raycastRight2dUp()
     {
         Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
@@ -102,24 +108,10 @@ private void Update()
         }
     }
 
-    /*
-    private void raycastLeftDown()
-    {
-        //Debug.Log("Starting left click function");
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-        {
-            Debug.Log("Hit something");
-            Debug.Log(hit.collider.name);
-            GameObject clicked = hit.transform.gameObject;
-            //selectedPlanet = clicked;
-        }
-        else
-            Debug.Log("Hit nothing");
-    }
     */
+
+
+
 
     private void raycastRightDown()
     {

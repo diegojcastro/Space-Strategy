@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - PauseMenuUI
     - Planet
+    - PlanetHighlight
     - PlanetTag
     - Ship
     Unity.2D.Animation.Editor.dll:
@@ -90,6 +91,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14458}
     - Class: 114
       Script: {instanceID: 14494}
+    - Class: 114
+      Script: {instanceID: 16354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -900,8 +903,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 0066d3f88e7295802ced5966a4f97b19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlanetHighlight
   platform: 20
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Galaxy0.unity
-  playerPath: E:/Unity Builds/Planet Rush
+  playerPath: E:/Unity Builds/Planet Rush alpha 2

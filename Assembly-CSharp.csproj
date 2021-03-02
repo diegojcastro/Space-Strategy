@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PauseMenuUI.cs" />
     <Compile Include="Assets\Scripts\Planet.cs" />
+    <Compile Include="Assets\Scripts\PlanetHighlight.cs" />
     <Compile Include="Assets\Scripts\PlanetTag.cs" />
     <Compile Include="Assets\Scripts\Ship.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
