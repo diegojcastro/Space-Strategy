@@ -1,5 +1,5 @@
 # Space-Strategy
-A simple Unity 2D game inspired by old flash games.
+A simple Unity 2D game inspired by old flash games. Built on Unity, scripts written in C#.
 
 Prototype available on https://squeakums.itch.io/planet-rush
 
