@@ -490,3 +490,186 @@ System memory in use after: 90.0 MB.
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2405.
 Total: 3.238100 ms (FindLiveObjects: 0.304500 ms CreateObjectMapping: 0.074600 ms MarkObjects: 2.839300 ms  DeleteObjects: 0.018300 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000936 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.158 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1841 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.9 MB.
+System memory in use after: 90.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2408.
+Total: 2.423300 ms (FindLiveObjects: 0.252100 ms CreateObjectMapping: 0.083800 ms MarkObjects: 2.068800 ms  DeleteObjects: 0.017800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3482.858729 seconds.
+  path: Assets/Sprites/planet02-purplered.png
+  artifactKey: Guid(347857b4fc3ffae48afd535554520b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/planet02-purplered.png using Guid(347857b4fc3ffae48afd535554520b67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79df77bc9d7f152ffd8b08b2ed8a6c5c') in 0.293744 seconds
+  Import took 0.297621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Sprites/planet01-greenblue.png
+  artifactKey: Guid(f81e586fbce90da408cb10aaf4433cd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/planet01-greenblue.png using Guid(f81e586fbce90da408cb10aaf4433cd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3eb2bdb69b538b1891976039e22bb8') in 0.013470 seconds
+  Import took 0.017661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Sprites/friend_spaceship_top.png
+  artifactKey: Guid(79c9db04b6516e34588fcb47cdf39ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/friend_spaceship_top.png using Guid(79c9db04b6516e34588fcb47cdf39ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bdfcf67fbba52e8bf4cec1281291bf') in 0.021712 seconds
+  Import took 0.025233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Sprites/highlight_selection2.png
+  artifactKey: Guid(acd28de814e86984bb0db687cdc7b730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/highlight_selection2.png using Guid(acd28de814e86984bb0db687cdc7b730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a89b4d6ad2b90ce5fdf239b160a366c') in 0.019718 seconds
+  Import took 0.024742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Sprites/WhiteSquare.png
+  artifactKey: Guid(df1ab1b48b84b40468efd37da908c904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WhiteSquare.png using Guid(df1ab1b48b84b40468efd37da908c904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e58e7efdd7bc6487f6b1970ba9ac546a') in 0.052568 seconds
+  Import took 0.055979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(8754b50a7c811ea43b9e1198cba4d492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(8754b50a7c811ea43b9e1198cba4d492) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0021f3e79afbfdb70156c1ba3248c4f6') in 0.008508 seconds
+  Import took 0.012515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Sprites/WhiteCircle.png
+  artifactKey: Guid(4d25fc0cfd05f98418b1c8613861a350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/WhiteCircle.png using Guid(4d25fc0cfd05f98418b1c8613861a350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3051c26965318fda34a895cac98bf668') in 0.014525 seconds
+  Import took 0.017850 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Sprites/enemy_spaceship_top.png
+  artifactKey: Guid(12339ddfa1b0bb34a8beea76d0ae8f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/enemy_spaceship_top.png using Guid(12339ddfa1b0bb34a8beea76d0ae8f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa39ca091348cde6c48de0cbafb4472') in 0.061476 seconds
+  Import took 0.065344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Sprites/planet03-orangeyellow.png
+  artifactKey: Guid(5e1937323754d1a49a351f743d6570ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/planet03-orangeyellow.png using Guid(5e1937323754d1a49a351f743d6570ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2ca281937f1edc9bb5a2352d724f1d7') in 0.016715 seconds
+  Import took 0.019978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Sprites/planet04-browngreen.png
+  artifactKey: Guid(81078ecf7d1c7a145a8fec6523dd2629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/planet04-browngreen.png using Guid(81078ecf7d1c7a145a8fec6523dd2629) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd36a14fd5724d149ed8ebd5ba39e0c') in 0.015751 seconds
+  Import took 0.019438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Sprites/enemy_spaceship_top.png
+  artifactKey: Guid(12339ddfa1b0bb34a8beea76d0ae8f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/enemy_spaceship_top.png using Guid(12339ddfa1b0bb34a8beea76d0ae8f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa39ca091348cde6c48de0cbafb4472') in 0.010184 seconds
+  Import took 0.013814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Sprites/placeholder_main_menu.png
+  artifactKey: Guid(089d9d41940b0744892bd8df8e2c18f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/placeholder_main_menu.png using Guid(089d9d41940b0744892bd8df8e2c18f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec9410b2223eba4f2b705b6090e33b46') in 0.019510 seconds
+  Import took 0.023802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/highlight_selection1.png
+  artifactKey: Guid(8141e62f44e644c4db814281bde418f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/highlight_selection1.png using Guid(8141e62f44e644c4db814281bde418f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4858f121b107f7c8c6745beffd91ee7e') in 0.056181 seconds
+  Import took 0.059717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Sprites/highlight_selection_rotate2.png
+  artifactKey: Guid(1a14be87b9b74f84282e098c540536b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/highlight_selection_rotate2.png using Guid(1a14be87b9b74f84282e098c540536b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e798cd3403aa7e55face7c174ed4a0c') in 0.013244 seconds
+  Import took 0.016655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Sprites/planet05-blueblue.png
+  artifactKey: Guid(e6667687bd8bc2147b95292cb030bdaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/planet05-blueblue.png using Guid(e6667687bd8bc2147b95292cb030bdaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f401591d089dc8ba786b526cb7f32f38') in 0.013472 seconds
+  Import took 0.016453 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000861 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.018 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1841 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 90.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2420.
+Total: 2.019700 ms (FindLiveObjects: 0.224200 ms CreateObjectMapping: 0.074900 ms MarkObjects: 1.701000 ms  DeleteObjects: 0.018600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001580 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.039 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1841 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.0 MB.
+System memory in use after: 90.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2423.
+Total: 2.959400 ms (FindLiveObjects: 0.543700 ms CreateObjectMapping: 0.230200 ms MarkObjects: 2.163100 ms  DeleteObjects: 0.020500 ms)
+
