@@ -141,6 +141,8 @@ public class GameManager : MonoBehaviour
    
     private void HighlightHandler()
     {
+        // Go from previously selected planet to deselect
+        // (by clicking empty space)
         if (selectedPlanet == null)
         {
             if (oldSelection != null)

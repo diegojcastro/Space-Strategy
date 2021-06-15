@@ -691,7 +691,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.96
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -834,7 +834,7 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
     type: 3}
-  planetName: Enemy HQ
+  planetName: Agog
   faction: Enemy
   population: 30
   armor: 0
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   ship: {fileID: 7503490019858330676, guid: 141ea77aaa9d9364691277d5eac019dd, type: 3}
   planetParticles: {fileID: 8551157436439206760, guid: 2ef5606c05070f04ba374856b563282d,
     type: 3}
-  planetName: Earthrealm
+  planetName: Earth
   faction: Player
   population: 35
   armor: 0

@@ -11,6 +11,8 @@ public class LineHandler : MonoBehaviour
     [SerializeField]
     private Vector3[] vectors;
 
+    private Transform[] plankPoints;
+
 
     private void Awake()
     {
@@ -27,13 +29,20 @@ public class LineHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (points.Length > 0)
+        if (points != null)
         {
-            for (int i = 0; i < points.Length; i++)
+            lr.positionCount = points.Length;
+            //Debug.Log("set LR position count to " + points.Length + "=" + lr.positionCount);
+            if (points.Length > 0)
             {
-                lr.SetPosition(i, points[i].position);
+                for (int i = 0; i < points.Length; i++)
+                {
+                    //Debug.Log("on linerenderer, i: " + i + "and points.Length: " + points.Length);
+                    lr.SetPosition(i, points[i].position);
+                }
             }
         }
+        
     }
 
 
@@ -59,5 +68,11 @@ public class LineHandler : MonoBehaviour
     public void ClearPoints()
     {
         lr.positionCount = 0;
+        points = null;
+    }
+
+    public int PositionCount()
+    {
+        return lr.positionCount;
     }
 }
