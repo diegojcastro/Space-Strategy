@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public int neutralPlanetTotal;
     public GameObject pauseMenuUI;
     private PauseMenuUI pauseMenuScript;
+    public LineHandler lineHandler;
 
     
 
@@ -144,6 +145,7 @@ public class GameManager : MonoBehaviour
         {
             if (oldSelection != null)
             {
+                lineHandler.ClearPoints();
                 foreach (Planet p in oldSelection.adjacents)
                     p.Unhighlight();
 
@@ -160,6 +162,7 @@ public class GameManager : MonoBehaviour
                 foreach (Planet p in selectedPlanet.adjacents)
                 {
                     p.Highlight();
+                    lineHandler.DrawLine(selectedPlanet, selectedPlanet.adjacents);
                 }
             }
             if (targetPlanet != null && targeting == true && selectedPlanet.faction.ToLower() == "player")
@@ -176,6 +179,7 @@ public class GameManager : MonoBehaviour
                 foreach (Planet p in selectedPlanet.adjacents)
                 {
                     p.Highlight();
+                    lineHandler.DrawLine(selectedPlanet, selectedPlanet.adjacents);
                 }
             }
         }
